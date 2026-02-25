@@ -7,7 +7,7 @@
     <!-- LOGO -->
     <div class="logo">
       <a href="#">
-        <img src="images/logo.jpeg" alt="Cirkle PR">
+        <img src="image/logo.jpeg" alt="Cirkle PR">
       </a>
     </div>
 
@@ -20,6 +20,13 @@
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
     </nav>
+
+    <!-- MOBILE MENU TOGGLE -->
+    <button class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
   </div>
 
@@ -106,7 +113,7 @@
 
     <!-- LEFT -->
     <div class="footer-col">
-      <img src="images/logo.jpeg" class="footer-logo">
+      <img src="image/logo.jpeg" class="footer-logo">
       <p>
         Cirkle PR & Consulting Pvt Ltd is a strategic public relations and
         communications firm helping brands build visibility and reputation
@@ -178,3 +185,21 @@
   </div>
 
 </footer>
+
+<!-- MOBILE MENU TOGGLE SCRIPT -->
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const menu = document.querySelector('.menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+
+  // Close menu when a link is clicked
+  const menuLinks = menu.querySelectorAll('a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('active');
+    });
+  });
+</script>
